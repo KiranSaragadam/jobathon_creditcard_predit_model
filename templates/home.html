@@ -1,4 +1,7 @@
 <html>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
 <body>
 	<h3>Credit Card Lead Prediction</h3>
 
@@ -10,7 +13,7 @@
 	<option value="Female">Female</option>
 	</select>
 	<br>
-	<label for="Age">Age</label>
+	<label for="Age">Age (0-100)</label>
 	<input type="text" id="Age" name="Age">
 	<br>
 	<label for="Region_code">Region_code</label>
@@ -73,7 +76,7 @@
 	<label for="Vintage">Vintage in months(0-200)</label>
 	<input type="text" id="Vintage" name="Vintage">
 	<br>
-	<label for="Credit_Product">is customer used Credit_Product previously?</label>
+	<label for="Credit_Product">Credit_Product</label>
 	<select id="Credit_Product" name="Credit_Product">
 	<option value="Yes">Yes</option>
 	<option value="No">No</option>
@@ -83,7 +86,7 @@
 	<label for="Avg_Account_Balance">Avg_Account_Balance for 12 months(0-100000000)</label>
 	<input type="text" id="Avg_Account_Balance" name="Avg_Account_Balance">
 	<br>
-	<label for="Is_Active">customer Is Active or not since last 3 months</label>
+	<label for="Is_Active">Is_Active since last 3 months</label>
 	<select id="Is_Active" name="Is_Active">
 	<option value="Yes">Yes</option>
 	<option value="No">No</option>
@@ -93,7 +96,11 @@
 </div>
 </body>
    <body>
-       <h1> {{ prediction }}</h1>
+       <h1> predicted case:{{ prediction }}</h1>
+       <br>
+       <h2>probability of predicting value of No: {{ prediction_1 }} with Yes: {{ prediction_2 }}</h3>
+       <h2>because it has:- {{prediction_3}}<h2>
+       <br>
    </body>
 </html>
 
